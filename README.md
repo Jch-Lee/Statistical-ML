@@ -6,3 +6,5 @@
    * 캐글의 Disaster Tweet NLP 프로젝트
 2. 논문 리뷰
    * **Attention is All You Need**
+
+이러면 수정되나?
