@@ -11,6 +11,19 @@
 ## 1. 데이터 수만 늘려(CIFAR-10 활용) 학습
 
 ## 2. 다양한 trick 이용
+* Data augmentation
+    * flipping
+    * gray scale
+    * brightness
+    * rotation
+    * center crop
+    * blurring
+    * mixup
+    * cutout
+    * cutmix
+
+* Dropout
+* Normalization
 
 
 ## 실험 목록
