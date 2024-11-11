@@ -3,10 +3,6 @@
 #### 모델 후보
 * MobileNet
 * EfficientNet
-#### 학습 환경
-* Epoch: 30~50
-* Batch Size: 32
-* 
 
 ## 1. 데이터 수만 늘려(CIFAR-10 활용) 학습
 
@@ -28,7 +24,7 @@
 
 ## 실험 목록
 기본적으로 5-fold cv 진행 후, 평균 accuracy를 기록
-#### 실험1
+#### 실험1 (baseline)
 * 파일명: MobileNet+EfficientNet
 * 데이터: 기본 4000장
 * 모델: MobileNet-v2
@@ -41,7 +37,7 @@
 * 기타: 
 * 정확도: 61.96%
 
-#### 실험2
+#### 실험2 (baseline)
 * 파일명: MobileNet+EfficientNet
 * 데이터: 기본 4000장
 * 모델: EfficientNet-b0
@@ -54,7 +50,7 @@
 * 기타: 
 * 정확도: 66.08%
 
-#### 실험3
+#### 실험3 (large dataset)
 * 파일명: Mob+Eff_bigdata
 * 데이터: 기본 4000장 + CIFAR-10 50000장
 * 모델: MobileNet-v2
@@ -66,9 +62,9 @@
 * 기타: 
 * 정확도: 85.13%
 
-#### 실험4
+#### 실험4 (large dataset)
 * 파일명: 
-* 데이터: 기본 + CIFAR-10
+* 데이터: 기본 4000장 + CIFAR-10 50000장
 * 모델: EfficientNet-b0
 * 전처리: Resize(224*224) + Normalize(0, 0.5)
 * 배치 크기: 16
@@ -78,7 +74,7 @@
 * 기타: 
 * 정확도: 87.73%
 
-#### 실험5
+#### 실험5 (large dataset + augment)
 * 파일명: Mob+Eff_bigdata_aug
 * 데이터: 기본 4000장 + CIFAR-10 50000장 + CIFAR_aug1 10000장 + CIFAR_aug2 10000장
 * 모델: EfficientNet-b0
