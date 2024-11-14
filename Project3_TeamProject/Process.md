@@ -181,21 +181,6 @@
 * 기타: 
 * 정확도: 92.08%
 
-#### 실험11 (large dataset + augment)
-* 파일명: Experiment5
-* 데이터: 기본 4000장 + CIFAR-10 50000장 + CIFAR_aug1 15000장 + CIFAR_aug2 15000장
-* 모델: EfficientNet-b0
-* 전처리:
-    * Basic: Resize(224*224) + Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261))
-    * Aug1: Basic + RandomResizedCrop(224, scale=(0.8, 1.0)) + RandomHorizontalFlip(p=0.5)
-    * Aug2: Basic + RandomRotation(45) + RandomHorizontalFlip(p=0.5) + ColorJitter(brightness=0.3, contrast=0.3)
-* 배치 크기: 32
-* 에포크: 60
-* 옵티마이저: Adam
-* 학습 스케쥴러: 
-* 기타: 
-* 정확도: 94.65%
-
 #### 실험12 (large dataset + augment)
 * 파일명: Experiment6
 * 데이터: 기본 4000장 + CIFAR-10 50000장 + CIFAR_aug1 15000장 + CIFAR_aug2 15000장
@@ -211,3 +196,18 @@
 * 학습 스케쥴러: 
 * 기타: 
 * 정확도: 93.%
+
+#### 실험13 (large dataset + augment)
+* 파일명: Experiment5
+* 데이터: 기본 4000장 + CIFAR-10 50000장 + CIFAR_aug1 15000장 + CIFAR_aug2 15000장
+* 모델: EfficientNet-b0
+* 전처리:
+    * Basic: Resize(224*224) + Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261))
+    * Aug1: Basic + RandomResizedCrop(224, scale=(0.8, 1.0)) + RandomHorizontalFlip(p=0.5)
+    * Aug2: Basic + RandomRotation(45) + RandomHorizontalFlip(p=0.5) + ColorJitter(brightness=0.3, contrast=0.3)
+* 배치 크기: 32
+* 에포크: 60
+* 옵티마이저: Adam
+* 학습 스케쥴러: 
+* 기타: 
+* 정확도: 94.65%
