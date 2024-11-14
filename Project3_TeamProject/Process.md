@@ -195,7 +195,7 @@
 * 옵티마이저: Adam
 * 학습 스케쥴러: 
 * 기타: 
-* 정확도: 93.%
+* 정확도: 93.45%
 
 #### 실험13 (large dataset + augment)
 * 파일명: Experiment5
@@ -215,10 +215,42 @@
 ## 발표 구성
 
 ### 1. 기본
-* EfficientNet
-  
+1-1. EfficientNet: 66.08%
+* Batch: 32
+* Epoch: 30
+* Data: base 4000
+* Optimizer: Adam
+1-2. ResNet:
+1-3. SE: 
+
 ### 2. CIFAR 데이터 추가
+2-1. EfficientNet: 87.73%
+* Batch: 32
+* Epoch: 30
+* Data: base 4000 + CIFAR-10 50000
+* Optimizer: Adam
+2-2. ResNet:
+2-3. SE: 
 
-### 3. 증강 데이터 추가
+### 3. 데이터 증강
+3-1. EfficientNet: 89.80%
+* Batch: 32
+* Epoch: 30
+* Data: base 4000 + CIFAR-10 50000 + CIFAR aug 15000
+   * aug: RandomRotation(45) + RandomHorizontalFlip(0.5)
+* Optimizer: Adam
 
-### 4. 다양한 증강 방법을 혼합
+3-2. ResNet:
+3-3. SE: 
+
+### 4. 증강 데이터 늘림 + 다양한 증강 방법을 혼합 + epoch 증가(because 학습 난이도 증가)
+4-1. EfficientNet: 94.65%
+* Batch: 32
+* Epoch: 60
+* Data: base 4000 + CIFAR-10 50000 + CIFAR aug1 15000 + CIFAR aug2 15000
+   * aug1: RandomResizedCrop(0.8~1.0) + RandomHorizontalFlip(0.5)
+   * aug2: RandomRotation(45) + RandomHorizontalFlip(p=0.5) + ColorJitter(brightness=0.3, contrast=0.3)
+* Optimizer: Adam
+
+4-2. ResNet: 
+4-3. SE: 
