@@ -242,7 +242,18 @@
 3-2. ResNet:  
 3-3. SE: 
 
-### 4. 증강 데이터 늘림 + 다양한 증강 방법을 혼합 + epoch 증가(because 학습 난이도 증가)
+### 4. 증강 데이터 약간 늘림 + 다른 증강 데이터를 혼합
+4-1. EfficientNet: 92.08%
+* Batch: 32
+* Epoch: 30
+* Data: base 4000 + CIFAR-10 50000 + CIFAR aug1 10000 + CIFAR aug2 10000
+   * aug1: RandomResizedCrop(0.8~1.0) + RandomHorizontalFlip(0.5)
+   * aug2: RandomRotation(45) + RandomHorizontalFlip(p=0.5) + ColorJitter(brightness=0.3, contrast=0.3)
+* Optimizer: Adam  
+4-2. ResNet:  
+4-3. SE:  
+
+### 5. 증강 데이터 더 늘림 + 다른 증강 데이터를 혼합 + epoch 증가(because 학습 난이도 증가)
 4-1. EfficientNet: 94.65%
 * Batch: 32
 * Epoch: 60
